@@ -1,48 +1,84 @@
-# Wordpress - ignore core, configuration, examples, uploads and logs.
-# https://github.com/github/gitignore/blob/main/WordPress.gitignore
-
-# Core
-#
-# Note: if you want to stage/commit WP core files
-# you can delete this whole section/until Configuration.
-/wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
-/wp-includes/
-/index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
-
-# Configuration
-wp-config.php
-
-# Example themes
-/wp-content/themes/twenty*/
-
-# Example plugin
-/wp-content/plugins/hello.php
-
-# Uploads
-/wp-content/uploads/
-
-# Log files
+# ----------------------------------------
+# General junk files and OS cruft
+# ----------------------------------------
+.DS_Store
+Thumbs.db
 *.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.zip
+*.tar
+*.tar.gz
 
-# htaccess
-/.htaccess
+# ----------------------------------------
+# Editor and IDE stuff
+# ----------------------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
 
-# All plugins
-#
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
-#/wp-content/plugins
+# ----------------------------------------
+# Dependency directories
+# (don’t commit these — rebuild them as needed)
+# ----------------------------------------
+vendor/
+node_modules/
 
-# All themes
-#
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-#/wp-content/themes
+# ----------------------------------------
+# Lock files (recreated automatically)
+# ----------------------------------------
+composer.lock
+package-lock.json
+yarn.lock
+
+# ----------------------------------------
+# Build outputs
+# (ignore anything that’s generated or compiled)
+# ----------------------------------------
+dist/
+build/
+*.map
+*.min.css
+*.min.js
+
+# ----------------------------------------
+# Localization files
+# (optional – usually generated, not hand-edited)
+# ----------------------------------------
+*.pot
+*.po
+*.mo
+
+# ----------------------------------------
+# Environment / config files
+# (never commit secrets or local configs)
+# ----------------------------------------
+.env
+.env.local
+.env.*
+.secret
+config-local.php
+
+# ----------------------------------------
+# Database and backup files
+# ----------------------------------------
+*.sql
+*.sql.gz
+*.bak
+
+# ----------------------------------------
+# Cache and temp directories
+# ----------------------------------------
+.sass-cache/
+.cache/
+.npm/
+.tmp/
+
+# ----------------------------------------
+# Plugin release zips
+# (ignore if you manually export versions)
+# ----------------------------------------
+/*.zip
